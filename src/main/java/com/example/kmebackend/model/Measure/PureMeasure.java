@@ -13,8 +13,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class PureMeasure {
     Clef clef;
-
     Integer armor;
-
     TimeSignature timeSignature;
 }

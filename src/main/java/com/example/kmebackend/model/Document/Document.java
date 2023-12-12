@@ -28,12 +28,18 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Document {
     public static Document getDefaultDocument() {
-        var defaultDocument = new Document();
+        Document defaultDocument = new Document();
+        defaultDocument.setId(UUID.randomUUID());
         StaffGroup staffGroup = new StaffGroup();
+        staffGroup.setId(UUID.randomUUID());
         Staff staff = new Staff();
+        staff.setId(UUID.randomUUID());
         Measure measure = new Measure();
+        measure.setId(UUID.randomUUID());
         Voice voice = new Voice();
+        voice.setId(UUID.randomUUID());
         NoteCluster noteCluster = new NoteCluster();
+        noteCluster.setId(UUID.randomUUID());
         List<NoteHead> noteHeads = new ArrayList<>();
         NoteHead noteHead = new NoteHead(0, Accidental.None);
 
